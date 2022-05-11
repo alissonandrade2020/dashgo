@@ -22,7 +22,7 @@ export default function Dashboard() {
             borderRadius={8}
             pb="4"
           >
-            <Text fontSize="lg" mb="4">Inscritos da semana</Text>
+            <Text fontSize="lg" mb="4">Total de faturamento</Text>
             <AnalyticsChart />
           </Box>
           <Box
@@ -31,7 +31,7 @@ export default function Dashboard() {
             borderRadius={8}
             pb="4"
           >
-            <Text fontSize="lg" mb="4">Taxa de abertura</Text>
+            <Text fontSize="lg" mb="4">Compras efetuadas</Text>
             <AnalyticsChart />
           </Box>
         </SimpleGrid>

@@ -12,6 +12,10 @@ import {
   RiNewspaperFill,
   RiRocketFill,
   RiRunFill,
+  RiCommunityFill,
+  RiBarChart2Fill,
+  RiCalendar2Fill,
+  RiEditBoxFill,
 } from "react-icons/ri";
 import { NavLink } from "./NavLink";
 import { NavSection } from "./NavSection";
@@ -31,6 +35,15 @@ export function SidebarNav() {
         </NavLink>
         <NavLink icon={RiRunFill} href="/coords">
           Coordenadores
+        </NavLink>
+        <NavLink icon={RiEditBoxFill} href="/process">
+          Processos
+        </NavLink>
+        <NavLink icon={RiCalendar2Fill} href="/calendar">
+          Calendario
+        </NavLink>
+        <NavLink icon={RiBarChart2Fill} href="/statistics">
+        Estatisticas
         </NavLink>
       </NavSection>
       <NavSection title="AUTOMAÇÃO">
