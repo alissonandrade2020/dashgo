@@ -11,5 +11,5 @@ export function Logo() {
       dashgo
       <Text as="span" ml="1" color="pink.500">.</Text>
     </Text>
-  );
+  )
 }

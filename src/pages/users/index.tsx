@@ -2,7 +2,7 @@ import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Text, Th,
 import Head from "next/head";
 import Link from "next/link";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
-import { Header } from "../../components/Header";
+import Header from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
@@ -60,7 +60,7 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">http://alissondeandradearaujo.000webhostapp.com</Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>01 de Janeiro, 2022</Td>}
+                {isWideVersion && <Td>11 de Maio, 2022</Td>}
                 { <Td>
                   <Button
                     as="a"
@@ -83,30 +83,7 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">http://alissondeandradearaujo.000webhostapp.com</Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>02 de Janeiro, 2022</Td>}
-                { <Td>
-                  <Button
-                    as="a"
-                    size="sm"
-                    fontSize="sm"
-                    colorScheme="purple"
-                    leftIcon={<Icon as={RiPencilLine} fontSize="16"/>}
-                  >
-                    { isWideVersion && 'Editar'}
-                  </Button>
-                </Td> }
-              </Tr>
-              <Tr>
-                <Td px={["4", "4", "6"]}>
-                  <Checkbox colorScheme="pink" />
-                </Td>
-                <Td>
-                  <Box>
-                    <Text fontWeight="bold">Matheus Reis</Text>
-                    <Text fontSize="sm" color="gray.300">http://alissondeandradearaujo.000webhostapp.com</Text>
-                  </Box>
-                </Td>
-                {isWideVersion && <Td>03 de Janeiro, 2022</Td>}
+                {isWideVersion && <Td>12 de Maio, 2022</Td>}
                 { <Td>
                   <Button
                     as="a"
@@ -122,7 +99,9 @@ export default function UserList() {
             </Tbody>
           </Table>
 
-          <Pagination />
+          <Pagination totalCountOfRegisters={0} onPageChange={function (page: number): void {
+            throw new Error("Function not implemented.");
+          } } />
         </Box>
       </Flex>
 

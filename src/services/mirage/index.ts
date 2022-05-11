@@ -1,11 +1,11 @@
-import { createServer, Factory, Model, Response, ActiveModelSerializer } from 'miragejs'
-import faker from 'faker'
+import { createServer, Factory, Model, Response, ActiveModelSerializer } from 'miragejs';
+import faker from 'faker';
 
 type User = {
   name: string;
   email: string;
   created_at: string;
-};
+}
 
 export function makeServer() {
   const server = createServer({
@@ -23,7 +23,7 @@ export function makeServer() {
           return `User ${i + 1}`
         },
         email() {
-          return faker.internet.email().toLowerCase();
+          return faker.internet.email().toLocaleLowerCase();
         },
         createdAt() {
           return faker.date.recent(10);
@@ -32,9 +32,9 @@ export function makeServer() {
     },
 
     seeds(server) {
-      server.createList('user', 200)
+      server.createList('user', 200);
     },
-
+    
     routes() {
       this.namespace = 'api';
       this.timing = 750;
@@ -48,9 +48,9 @@ export function makeServer() {
         const pageEnd = pageStart + Number(per_page);
 
         const users = this.serialize(schema.all('user'))
-          .users
-          .sort((a, b) => a.createdAt - b.createdAt)
-          .slice(pageStart, pageEnd)
+        .users
+        .sort((a, b) => a.createdAt - b.createdAt)
+        .slice(pageStart, pageEnd)
 
         return new Response(
           200,

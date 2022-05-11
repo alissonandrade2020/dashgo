@@ -7,7 +7,7 @@ interface ProfileProps {
 export function Profile({ showProfileData = true }: ProfileProps) {
   return (
     <Flex align="center">
-      { showProfileData && (
+      {showProfileData && (
         <Box mr="4" textAlign="right">
           <Text>Alisson de Andrade Araújo</Text>
           <Text color="gray.300" fontSize="small">
@@ -16,7 +16,11 @@ export function Profile({ showProfileData = true }: ProfileProps) {
         </Box>
       )}
 
-      <Avatar size="md" name="Alisson Andrade " src="https://github.com/alissonandrade2020.png"/>
+      <Avatar
+        size="md"
+        name="Alisson Andrade "
+        src="https://github.com/alissonandrade2020.png"
+      />
     </Flex>
   );
 }
